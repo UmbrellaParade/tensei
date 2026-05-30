@@ -7,11 +7,16 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>☂ Umbrella Parade 占い</h1>
-    </header>
 
+  <div class="hero">
+    <img class="hero-bg" src="{{ url_for('static', filename='bg-characters.png') }}" alt="">
+    <div class="hero-overlay"></div>
+    <div class="logo-wrap">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Umbrella Parade">
+    </div>
+  </div>
+
+  <div class="container">
     <div class="result-card">
       <div class="result-icon">{{ type_data.icon }}</div>
       <p class="result-flavor">{{ flavor }}</p>
@@ -46,5 +51,6 @@
 
     <a href="/" class="back-btn">もう一度やる</a>
   </div>
+
 </body>
 </html>

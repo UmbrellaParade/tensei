@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+  <div class="hero">
+    <img class="hero-bg" src="{{ url_for('static', filename='bg-characters.png') }}" alt="">
+    <div class="hero-overlay"></div>
+    <div class="logo-wrap">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Umbrella Parade">
+    </div>
+  </div>
+
   <div class="container">
-    <header>
-      <h1>☂ Umbrella Parade 占い</h1>
-      <p class="subtitle">あなたはどの存在に近い？</p>
-    </header>
+    <p class="page-subtitle">あなたはどの存在に近い？</p>
 
     <form action="/result" method="POST">
       <div class="question-block">
@@ -43,5 +49,6 @@
       <button type="submit" class="submit-btn">判定する</button>
     </form>
   </div>
+
 </body>
 </html>
