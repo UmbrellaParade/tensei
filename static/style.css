@@ -112,6 +112,27 @@ body {
   margin-bottom: 2.5rem;
 }
 
+/* ===== INTRO ===== */
+.intro-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1rem;
+}
+
+.intro-catch {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #d4a8ff;
+  text-shadow: 0 0 12px rgba(180,100,255,0.5);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.intro-text p {
+  color: #a090c0;
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
 /* ===== QUESTIONS ===== */
 .question-block {
   background: rgba(18, 14, 36, 0.9);
