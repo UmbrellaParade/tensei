@@ -25,6 +25,19 @@ body {
   height: 52vh;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    height: 100svh;
+  }
+  .hero-bg {
+    content: url('/static/bg-characters-sp.png');
+    object-position: center center;
+  }
+  .hero.hero--result {
+    height: 56svh;
+  }
+}
+
 .hero-bg {
   width: 100%;
   height: 100%;
