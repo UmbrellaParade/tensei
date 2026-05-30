@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>結果 | Umbrella Parade 占い</title>
+  <title>転生先確定 | Umbrella Parade</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-  <div class="hero">
+  <div class="hero hero--result">
     <img class="hero-bg" src="{{ url_for('static', filename='bg-characters.png') }}" alt="">
     <div class="hero-overlay"></div>
-    <div class="logo-wrap">
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="Umbrella Parade">
+    <div class="hero-content">
+      <div class="logo-wrap">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Umbrella Parade">
+      </div>
+      <p class="hero-title">転生したら何になる？</p>
+      <p class="scroll-hint">▼ scroll</p>
     </div>
   </div>
 
@@ -20,7 +24,7 @@
     <div class="result-card">
       <div class="result-icon">{{ type_data.icon }}</div>
       <p class="result-flavor">{{ flavor }}</p>
-      <h2 class="result-type">あなたは <span>{{ type_name }}</span> です</h2>
+      <h2 class="result-type">あなたの転生先は <span>{{ type_name }}</span> です</h2>
       <p class="result-subtitle">— {{ type_data.subtitle }} —</p>
 
       <div class="result-description">
@@ -49,7 +53,7 @@
       </div>
     </div>
 
-    <a href="/" class="back-btn">もう一度やる</a>
+    <a href="/" class="back-btn">別の転生先を探す</a>
   </div>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Umbrella Parade 占い</title>
+  <title>転生診断 | Umbrella Parade</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -11,13 +11,17 @@
   <div class="hero">
     <img class="hero-bg" src="{{ url_for('static', filename='bg-characters.png') }}" alt="">
     <div class="hero-overlay"></div>
-    <div class="logo-wrap">
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="Umbrella Parade">
+    <div class="hero-content">
+      <div class="logo-wrap">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Umbrella Parade">
+      </div>
+      <p class="hero-title">転生したら何になる？</p>
+      <p class="scroll-hint">▼ scroll</p>
     </div>
   </div>
 
   <div class="container">
-    <p class="page-subtitle">あなたはどの存在に近い？</p>
+    <p class="page-subtitle">生まれ変わったら、あなたは何になる？</p>
 
     <form action="/result" method="POST">
       <div class="question-block">
