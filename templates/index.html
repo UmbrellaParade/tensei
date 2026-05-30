@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbrella Parade 占い</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>☂ Umbrella Parade 占い</h1>
+      <p class="subtitle">あなたはどの存在に近い？</p>
+    </header>
+
+    <form action="/result" method="POST">
+      <div class="question-block">
+        <label class="question-label">生まれた月は？</label>
+        <div class="select-wrapper">
+          <select name="birth_month" required>
+            <option value="" disabled selected>選んでください</option>
+            {% for m in range(1, 13) %}
+            <option value="{{ m }}">{{ m }}月</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      {% for q in questions %}
+      <div class="question-block">
+        <label class="question-label">Q{{ loop.index }}. {{ q.text }}</label>
+        <div class="options">
+          {% for opt in q.options %}
+          <label class="option-label">
+            <input type="radio" name="{{ q.id }}" value="{{ opt.type }}" required>
+            <span>{{ opt.label }}</span>
+          </label>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+
+      <button type="submit" class="submit-btn">判定する</button>
+    </form>
+  </div>
+</body>
+</html>

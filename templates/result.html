@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>結果 | Umbrella Parade 占い</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>☂ Umbrella Parade 占い</h1>
+    </header>
+
+    <div class="result-card">
+      <div class="result-icon">{{ type_data.icon }}</div>
+      <p class="result-flavor">{{ flavor }}</p>
+      <h2 class="result-type">あなたは <span>{{ type_name }}</span> です</h2>
+      <p class="result-subtitle">— {{ type_data.subtitle }} —</p>
+
+      <div class="result-description">
+        {% for line in type_data.description.split('\n') %}
+          <p>{{ line }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="result-details">
+        <div class="detail-item">
+          <span class="detail-label">✦ 強み</span>
+          <span>{{ type_data.strength }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">✦ 弱み</span>
+          <span>{{ type_data.weakness }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">✦ 相性</span>
+          <span>{{ type_data.compatibility }}</span>
+        </div>
+      </div>
+
+      <div class="result-message">
+        <p>{{ type_data.message }}</p>
+      </div>
+    </div>
+
+    <a href="/" class="back-btn">もう一度やる</a>
+  </div>
+</body>
+</html>
