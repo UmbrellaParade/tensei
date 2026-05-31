@@ -36,6 +36,10 @@ body {
   .hero.hero--result {
     height: 56svh;
   }
+  .scroll-hint {
+    right: 2rem;
+    bottom: 3rem;
+  }
 }
 
 .hero-bg {
